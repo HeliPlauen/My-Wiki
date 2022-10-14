@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit the file already exists
+{% endblock %}
+
+{% block body %}
+    <h1>Edit the file already exists</h1> <br>
+    <form action="{% url 'encyclopedia:edit' %}" method="post">
+        {% csrf_token %}
+        {{ form }}<br>
+        <input type="submit">
+    </form>
+{% endblock %}
