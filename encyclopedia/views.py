@@ -16,8 +16,8 @@ TITLE = ""
 
 # the 1-st form type
 class NewTaskForm(forms.Form):
-    title = forms.CharField(label="Title") 
-    text = forms.CharField(label="Text", widget=forms.Textarea())
+    title = forms.CharField(label="Title", widget=forms.TextInput(attrs={'class': 'form-control'})) 
+    text = forms.CharField(label="Text", widget=forms.Textarea(attrs={'class': 'form-control'}))
 
 
 # the 2-nd form type
